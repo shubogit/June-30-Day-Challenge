@@ -1,0 +1,22 @@
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        
+        boolean flag = false;
+        char S[] = s.toCharArray();
+        
+         int T = 0;
+        int i = 0;
+        while(T < t.length() && i < S.length) {
+            if(S[i] == t.charAt(T)) {
+                i++;
+            }
+            T++;
+        }
+        if(i == S.length) {
+            flag = true;
+        }
+        
+        return flag;
+        
+    }
+}
